@@ -7,3 +7,6 @@ def cli(ctx):
         print("hallu y'all")
     else:
         pass
+
+if __name__ == '__main__':
+    cli()
