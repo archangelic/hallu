@@ -4,6 +4,6 @@ import click
 @click.pass_context
 def cli(ctx):
     if ctx.invoked_subcommand is None:
-        print("hallu y'all")
+        click.echo("hallu y'all")
     else:
         pass
