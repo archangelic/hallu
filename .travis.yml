@@ -3,4 +3,4 @@ install:
     - ./setup.py install
     - pip install nose
 script:
-    - nosetests
+    - nosetests --with-coverage --cover-package=hallu
