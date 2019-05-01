@@ -1,3 +1,6 @@
 language: python
 install:
-    - pip install click
+    - ./setup.py install
+    - pip install nose
+script:
+    - nosetests
