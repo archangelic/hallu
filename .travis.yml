@@ -1,6 +1,6 @@
 language: python
 install:
     - ./setup.py install
-    - pip install nose
+    - pip install nose coverage
 script:
     - nosetests --with-coverage --cover-package=hallu
