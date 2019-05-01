@@ -1,4 +1,5 @@
 # hallu
+[![Build Status](https://travis-ci.com/archangelic/hallu.svg?branch=master)](https://travis-ci.com/archangelic/hallu)
 1. hallucinating a zine publishing tool and static site generator
 2. saying hello like a weirdo
 
