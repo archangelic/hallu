@@ -11,8 +11,10 @@ def cli(ctx):
 
 @cli.command('init')
 @click.option('-n', '--name', prompt=True)
-@click.option('-d', '--directory', default=os.getcwd())
+@click.option('-d', '--directory', default=None)
 def hallu_init(name, directory):
+    if not directory:
+        directory = os.getcwd()
     if 'settings.py' not in os.listdir(directory):
         with open('settings.py', 'w') as settings:
             settings.write(f'NAME = "{name}"\n')
