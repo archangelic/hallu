@@ -15,8 +15,18 @@ def cli(ctx):
 def hallu_init(name, directory):
     if not directory:
         directory = os.getcwd()
-    if 'settings.py' not in os.listdir(directory):
+    elif directory not in os.listdir(os.getcwd()):
+        os.mkdir(directory)
+        os.chdir(directory)
+    cur_dir = os.getcwd()
+    dirs = ['site', 'zine']
+    if 'settings.py' not in os.listdir(cur_dir):
         with open('settings.py', 'w') as settings:
             settings.write(f'NAME = "{name}"\n')
+    for folder in dirs:
+        try:
+            os.mkdir(folder)
+        except FileExistsError:
+            click.echo(f'{folder} directory already exists')
     click.echo(f'Project: "{name}" successfully initiated')
 
